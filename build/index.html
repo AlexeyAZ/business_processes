@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Франчайзинг5</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;"></svg>
+    <div class="form-wrap form-wrap_small">
+      <div class="form-container" id="smallFormContainer">
+        <div class="form__close"></div>
+        <p class="form__heading">Оставьте заявку на презентацию франшизы</p>
+        <form class="form" id="smallForm" data-next="#bigForm">
+          <label class="form__label">
+            <input class="input input_modal form__input" type="text" name="name" placeholder="Ваше имя" required="">
+          </label>
+          <label class="form__label">
+            <input class="input input_modal form__input" type="text" name="phone" placeholder="Ваш телефон" required="">
+          </label>
+          <label class="form__label">
+            <input class="input input_modal form__input" type="email" name="email" placeholder="Ваш email" required="">
+          </label>
+          <button class="btn-round form__btn js-big-btn">Отправить</button>
+          <label>
+            <input type="checkbox" checked required><span class="form__security-text">Нажимая кнопку «Отправить», я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="form-wrap form-wrap_big">
+      <div class="form-container" id="bigFormContainer">
+        <div class="form__close"></div>
+        <p class="form__title">Спасибо!</p>
+        <p class="form__descr">В ближайшее время мы обработаем Вашу заявку. Для того, чтобы наш специалист мог максимально подробно ответить на все Ваши вопросы, заполните, пожалуйста, следующую форму. Заранее благодарим!</p>
+        <form class="form" method="POST" id="bigForm">
+          <input class="js-hidden-name" type="hidden" name="name1">
+          <input class="js-hidden-phone" type="hidden" name="phone1">
+          <input class="js-hidden-phone" type="hidden" name="email1">
+          <label class="form__label"><span>Введите Ваш город</span>
+            <input class="input input_modal form__input" type="text" name="city" placeholder="Иваново" required="">
+          </label>
+          <label class="form__label"><span>Введите Ваш возраст</span>
+            <input class="input input_modal form__input" type="text" name="age" placeholder="27" required="">
+          </label>
+          <label class="form__label"><span>Наличие бизнеса / Опыт бизнеса</span>
+            <select class="select form__input" name="business">
+              <option value="yes">Да</option>
+              <option value="no">Нет</option>
+            </select>
+          </label>
+          <label class="form__label"><span>Объем планируемых инвестиций</span>
+            <select class="select form__input" name="volume">
+              <option value="100 000 - 250 000">100 000 — 250 000 рублей</option>
+              <option value="250 000 - 500 000">250 000 — 500 000 рублей</option>
+              <option value="500 000 - 750 000">500 000 — 750 000 рублей</option>
+              <option value="750 000 - 1 000 000">750 000 — 1 000 000 рублей</option>
+              <option value="1 000 000 - 1 500 000">1 000 000 — 1 500 000 рублей</option>
+              <option value="1 500 000 - 3 000 000">1 500 000 — 3 000 000 рублей</option>
+              <option value="3 000 000">Более 3 000 000 рублей</option>
+            </select>
+          </label>
+          <button class="btn-round form__btn form__btn_center">Получить предложение</button>
+          <label>
+            <input type="checkbox" checked required><span class="form__security-text">Нажимая кнопку «Получить предложение», я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+          </label>
+        </form>
+      </div>
+    </div>
+    <section class="sec sec1">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__item header__item_logo"><a class="header__logo" href="/"><img class="header__logo-img" src="img/header-logo.svg" alt=""></a></div>
+          <div class="header__item header__item_contacts"><a class="header__link phone" href="tel:88003331963" data-phone="88003331963">8 (800) 333-19-63</a><a class="header__link link link_getcall js-small-btn" href="">Бесплатно по России</a></div>
+        </div>
+      </header>
+      <div class="container color-white">
+        <h2 class="medium tt-uppercase sec1__heading">95% времени занимаетесь операционкой?</h2>
+        <p class="xl italic mb1">Опишите наконец бизнес-процессы</p>
+        <div class="sec1__border">
+          <p class="s sec1__border-text mb0 medium">Покончите с операционкой и начните<br> заниматься приоритетными бизнес-задачами</p><a class="sec1__btn btn-round btn-round_main sec1__border-btn btn-round_anchor" href="#bottomForm">Настроить бизнес-процессы</a>
+        </div>
+      </div><img class="sec1__img sec1__img_phone" src="img/sec1-phone.png" alt=""><img class="sec1__img sec1__img_man" src="img/sec1-man.png" alt="">
+    </section>
+    <section class="sec sec2">
+      <div class="sec2__gears"><img class="sec2__gear sec2__gear_small" src="img/gear-small.png" alt=""><img class="sec2__gear sec2__gear_medium" src="img/gear-medium.png" alt=""><img class="sec2__gear sec2__gear_big" src="img/gear-big.png" alt=""></div>
+      <div class="container sec2__container sec2__container_top">
+        <div class="sec2__row">
+          <div class="sec2__col sec2__col_text">
+            <h3 class="bold">Настройте бизнес-процессы в своей компании</h3>
+            <p class="xs">Настроив бизнес-процессы в своей компании, Вы избавитесь<br> от рутины и будете заниматься стратегическими задачами.<br> Каждый Ваш сотрудник будет знать свои цели труда и что<br> нужно делать для их достижения, что позволит </p>
+            <p class="l italic color-pink sec2__subtitle">увеличить прибыль компании от 2-х до 10 раз</p>
+          </div>
+          <div class="sec2__col sec2__col_img"><img class="sec2__women" src="img/sec2-girl.png" alt=""></div>
+        </div>
+      </div>
+      <div class="container sec2__container sec2__container_bottom">
+        <div class="sheets sec2__sheets">
+          <h3 class="bold sec2__sheets-title">Начните заниматься<br> развитием бизнеса</h3>
+          <ul class="sec2__list mb2">
+            <li class="sec2__list-item">
+              <p class="s">Перейдите от хаоса к системному управлению бизнесом</p>
+            </li>
+            <li class="sec2__list-item">
+              <p class="s">Увеличьте эффективность работы сотрудников</p>
+            </li>
+            <li class="sec2__list-item">
+              <p class="s">Используйте больше времени для выполнения стратегических задач</p>
+            </li>
+            <li class="sec2__list-item">
+              <p class="s">Выведите Вашу компанию в лидеры рынка</p>
+            </li>
+          </ul><a class="btn-round btn-round_anchor sec2__btn" href="#bottomForm">Настроить бизнес-процессы</a>
+        </div>
+      </div>
+    </section>
+    <section class="sec sec3">
+      <div class="container">
+        <h3 class="ta-center bold">Комплексная настройка бизнес-процессов для всех отделов компании</h3>
+        <p class="m italic ta-center mb2 sec3__subtitle">Первым делом начните оптимизацию бизнес-процессов с отдела продаж,<br> потому что главное в каждом бизнесе — это продажи</p><img class="sec3__girl" src="img/sec3-girl.png" alt="">
+      </div>
+      <div class="sec3__gears"><img class="sec3__gear sec3__gear_medium" src="img/gear-medium.png" alt=""><img class="sec3__gear sec3__gear_big" src="img/gear-big.png" alt=""></div>
+    </section>
+    <section class="sec sec4" id="bottomForm">
+      <div class="container sec4__container">
+        <h3 class="medium color-white ta-center sec4__heading">Скачайте PDF-презентацию и узнайте, как настроить бизнес-процессы и увеличить прибыль компании</h3>
+        <div class="sheets sec5__sheets">
+          <form class="sec5__form" data-next="#bigForm" id="bottomForm">
+            <div class="sec5__form-row">
+              <label class="sec5__form-label" for="sec9InputName">Ваше имя</label>
+              <input class="sec5__form-input input input_small" id="sec9InputName" name="name" placeholder="Александр" required>
+            </div>
+            <div class="sec5__form-row">
+              <label class="sec5__form-label" for="sec9InputPhone">Ваш телефон</label>
+              <input class="sec5__form-input input input_small" id="sec9InputPhone" name="phone" type="tel" placeholder="+ (___) ___-__-__" required>
+            </div>
+            <div class="sec5__form-row">
+              <label class="sec5__form-label" for="sec9InputEmail">E-mail</label>
+              <input class="sec5__form-input input input_small" id="sec9InputEmail" name="email" type="email" placeholder="example@yandex.ru" required>
+            </div>
+            <button class="btn-round btn-round_download sec5__form-btn">Скачать презентацию<img class="sec5__form-arrow" src="img/btn-arrow.png" alt=""></button>
+            <label>
+              <input type="checkbox" checked required><span class="form__security-text form__security-text_big">Нажимая кнопку «Скачать презентацию», я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+            </label>
+          </form>
+        </div>
+      </div><img class="sec4__man" src="img/sec4-man.png" alt="">
+    </section>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__block footer__block_info">
+          <div class="footer__info"><a href="/"><img class="footer__info-img" src="img/footer-logo.svg" alt=""></a></div>
+        </div>
+        <div class="footer__block footer__block_company">
+          <div class="footer__info-list">
+            <p class="footer__info-list-item">ООО «ФРАНЧАЙЗИНГ5»</p>
+            <p class="footer__info-list-item">ИНН/КПП 1655296086/165901001</p>
+            <p class="footer__info-list-item">ОГРН 1141690046552</p>
+          </div>
+        </div>
+        <div class="footer__block footer__block_contacts">
+          <p class="footer__text footer__text_adress">Наш офис: г. Казань, ул. Сайдашева,<br> д 12, 6 этаж, Бизнес центр «Рябина»</p><a class="footer__link footer__link_map" href="https://www.google.ru/maps/place/%D0%A0%D1%8F%D0%B1%D0%B8%D0%BD%D0%B0/@55.773235,49.1146081,17z/data=!4m13!1m7!3m6!1s0x415eacffc49ce9e9:0xb1d4b3627580bdf0!2z0YPQuy4g0KHQsNC70LjRhdCwINCh0LDQudC00LDRiNC10LLQsCwgMTIsINCa0LDQt9Cw0L3RjCwg0KDQtdGB0L8uINCi0LDRgtCw0YDRgdGC0LDQvSwgNDIwMDIx!3b1!8m2!3d55.7722936!4d49.1169041!3m4!1s0x0:0x103669378a6ff6d8!8m2!3d55.7729162!4d49.1141177" target="_blank">Схема проезда</a>
+        </div>
+        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:88003331963" data-phone="88003331963">8 (800) 333-19-63</a>
+          <p class="footer__phone-note footer__text mb0">Бесплатно по России</p><a class="footer__text footer__link footer__link_politic" href="doc/politic.pdf" target="_blank">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/vendor.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

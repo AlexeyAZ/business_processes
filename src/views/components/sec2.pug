@@ -1,0 +1,29 @@
+- var sec2List = ["Перейдите от хаоса к системному управлению бизнесом", "Увеличьте эффективность работы сотрудников", "Используйте больше времени для выполнения стратегических задач", "Выведите Вашу компанию в лидеры рынка"];
+
+section.sec.sec2
+    div.sec2__gears
+        img(src="img/gear-small.png", alt="").sec2__gear.sec2__gear_small
+        img(src="img/gear-medium.png", alt="").sec2__gear.sec2__gear_medium
+        img(src="img/gear-big.png", alt="").sec2__gear.sec2__gear_big
+    div.container.sec2__container.sec2__container_top
+        div.sec2__row
+            div.sec2__col.sec2__col_text
+                h3.bold.
+                    Настройте бизнес-процессы в своей компании
+                p.xs.
+                    Настроив бизнес-процессы в своей компании, Вы избавитесь<br> от рутины и будете заниматься стратегическими задачами.<br> Каждый Ваш сотрудник будет знать свои цели труда и что<br> нужно делать для их достижения, что позволит 
+                p.l.italic.color-pink.sec2__subtitle.
+                    увеличить прибыль компании от 2-х до 10 раз
+            div.sec2__col.sec2__col_img
+                img(src="img/sec2-girl.png", alt="").sec2__women
+    div.container.sec2__container.sec2__container_bottom
+        div.sheets.sec2__sheets
+            h3.bold.sec2__sheets-title.
+                Начните заниматься<br> развитием бизнеса
+            ul.sec2__list.mb2
+                each item in sec2List
+                    li.sec2__list-item
+                        p.s.
+                            #{item}
+            a(href="#bottomForm").btn-round.btn-round_anchor.sec2__btn.
+                Настроить бизнес-процессы

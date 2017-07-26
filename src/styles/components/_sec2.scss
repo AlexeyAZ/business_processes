@@ -1,0 +1,208 @@
+.sec2 {
+    background-color: $sec2-bg;
+    overflow: hidden;
+    padding: 100px 0 70px;
+
+    @include media(w1024) {
+        padding: 60px 0;
+    }
+
+    @include media(w768) {
+        padding: 30px 0 10px;
+    }
+
+    &__gears {
+        position: absolute;
+        top: 18%;
+        right: 80%;
+
+        @include media(w1366) {
+            top: 22%;
+            right: 82%;
+        }
+
+        @include media(w1280) {
+            top: 22%;
+            right: 83%;
+        }
+
+        @include media(w1024) {
+            top: 10%;
+            right: 70%;
+        }
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__gear {
+        display: block;
+
+        &_small {
+            animation: rotateGearAnimate 4s infinite linear;
+        }
+
+        &_medium {
+            animation: rotateGearAnimate 8s reverse infinite linear;
+            position: relative;
+            margin-top: -38px;
+            margin-left: 68px;
+        }
+
+        &_big {
+            animation: rotateGearAnimate 16s infinite linear 0.2s;
+            margin-top: -124px;
+            margin-left: -242px;
+        }
+    }
+
+    &__container {
+
+        &_top {
+
+            @include media(w1024) {
+                text-align: center;
+            }
+
+            @include media(w768) {
+                text-align: left;
+            }
+        }
+
+        &_bottom {
+            z-index: 1;
+        }
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 80px;
+
+        @include media(w1024) {
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        @include media(w768) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__col {
+        width: 50%;
+
+        &_text {
+            width: 60%;
+        }
+
+        &_img {
+            width: 40%;
+        }
+
+        @include media(w1024) {
+            width: auto;
+        }
+    }
+
+    &__subtitle {
+
+        @include media(w1024) {
+            margin-bottom: 80px;
+        }
+
+        @include media(w768) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__women {
+        transform: translateX(-10%);
+
+        @include media(w1366) {
+            max-width: 800px;
+        }
+
+        @include media(w1024) {
+            transform: translateX(18%);
+            display: block;
+            max-width: none;
+            width: 120%;
+        }
+
+        @include media(w768) {
+            transform: translateX(-8%);
+            width: 180%;
+        }
+    }
+
+    &__sheets {
+        background-image: url("../img/sec2-map.png");
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding: 50px 0 90px 70px;
+
+        @include media(w1280) {
+            background-size: 40%;
+        }
+
+        @include media(w1024) {
+            background-position: right bottom;
+            background-size: 35%;
+            padding: 40px 0 90px 40px;
+        }
+
+        @include media(w768) {
+            background-image: none;
+            padding: 30px 20px 50px;
+        }
+    }
+
+    &__sheets-title {
+
+        @include media(w768) {
+            font-size: 24px;
+        }
+    }
+
+    &__list {
+        width: 60%;
+
+        @include media(w1024) {
+            width: auto;
+        }
+    }
+
+    &__list-item {
+        padding-left: 25px;
+        position: relative;
+        
+        &:before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: calc(0.5em + 2px);
+            left: 0;
+            height: 1px;
+            width: 20px;
+        }
+    }
+
+    &__btn {
+        justify-content: center;
+    }
+}
+
+@mixin rotateGear($item) {
+}
+
+@keyframes rotateGearAnimate{
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,127 @@
+.thanks {
+    background-image: url("../img/sec1-bg.jpg");
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 260px;
+    z-index: 1;
+
+    @include media(w1024) {
+        //padding-bottom: 200px;
+    }
+
+    @include media(w768) {
+        padding-bottom: 0;
+    }
+
+    &__heading {
+        font-weight: 500;
+        font-size: 65px;
+        text-transform: uppercase;
+        padding-bottom: 0;
+
+        @include media(w1024) {
+            font-size: 40px;
+        }
+
+        @include media(w768) {
+            font-size: 24px;
+            margin-bottom: 1em;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        margin-bottom: 1em;
+
+        @include media(w1024) {
+            font-size: 28px;
+        }
+
+        @include media(w768) {
+            font-size: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 21px;
+        margin-bottom: 1em;
+
+        @include media(w1024) {
+            //font-size: 30px;
+        }
+
+        @include media(w768) {
+            font-size: 18px;
+            margin-bottom: 2em;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__border {
+        width: 70%;
+
+        @include media(w1024) {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+        }
+
+        @include media(w768) {
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    &__border-btn {
+        margin-bottom: 20px;
+        justify-content: center;
+
+        span {
+
+            @include media(w768) {
+                display: none;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        width: 100%;
+
+        @include media(w768) {
+            flex-direction: column;
+        }
+    }
+
+    &__buttons-link {
+        color: white;
+        font-size: 30px;
+        margin-left: 60px;
+
+        @include media(w768) {
+            font-size: 20px;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+    &__link {
+        color: #b5b5b5;
+        font-size: 18px;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__btn {
+        justify-content: center;
+    }
+}

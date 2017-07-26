@@ -1,0 +1,37 @@
+extends templates/layout
+
+block vars
+    - var title = 'франчайзинг5'
+
+block content
+    include components/form
+    section.sec.thanks
+        include components/header
+        div.container.color-white
+            p.thanks__heading.
+                <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
+            p.thanks__title.italic.
+                Мы свяжемся с Вами в ближайшее время
+            p.thanks__subtitle.
+                График работы с 9.00 до 23.00. Поэтому, если вы оставили заявку в нерабочее время,<br> мы перезвоним вам на следующий рабочий день
+            div.sec1__border.thanks__border
+                a(href="doc/mk.pdf" target="_blank").btn-round.btn-round_main.js-small-btn.thanks__border-btn.
+                    Скачать презентацию<span>. PDF, 13 Mb</span>
+                a(href="/index.html").thanks__link.
+                    ← Вернуться на сайт
+        img(src="img/sec1-phone.png", alt="").sec1__img.sec1__img_phone
+        img(src="img/sec1-man.png", alt="").sec1__img.sec1__img_man
+
+
+        //div.container
+            p.thanks__heading.
+                <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
+            p.thanks__title.
+                Мы свяжемся с Вами в ближайшее время
+            div.thanks__buttons
+                a(href="doc/mk.pdf" target="_blank").btn-round.btn-round_download.
+                    Открыть презентацию
+                a(href="/index.html").thanks__links-link.
+                    Вернуться на сайт
+            p.thanks__subtitle.
+                График работы с 9.00 до 23.00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий рабочий день

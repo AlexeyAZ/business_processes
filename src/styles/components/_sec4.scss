@@ -1,0 +1,48 @@
+.sec4 {
+    background-image: url("../img/sec4-bg.jpg");
+    overflow: hidden;
+    padding: 60px 0 40px;
+
+    @include media (w1024) {
+        padding: 40px 0 0;
+    }
+
+    &__container {
+        z-index: 1;
+    }
+
+    &__heading {
+        margin-bottom: 2em;
+
+        @include media (w1024) {
+            margin-bottom: 1em;
+        }
+
+        @include media (w768) {
+            font-size: 20px;
+        }
+    }
+
+    &__man {
+        position: absolute;
+        display: block;
+        left: calc(50% + 100px);
+        bottom: 0;
+        max-height: 80%;
+
+        @include media (w1280) {
+            left: calc(50% + 50px);
+        }
+
+        @include media (w1024) {
+            position: static;
+            margin: 0 auto -200px;
+        }
+
+        @include media (w768) {
+            margin: 0 auto;
+            max-width: 628px;
+            width: 100%;
+        }
+    }
+}

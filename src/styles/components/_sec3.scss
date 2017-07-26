@@ -1,0 +1,60 @@
+.sec3 {
+    background-color: $sec2-bg;
+    overflow: hidden;
+    z-index: 1;
+
+    &__subtitle {
+        line-height: 1.4;
+
+        @include media(w1024) {
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__girl {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    &__gears {
+        transform: translateY(30%);
+        text-align: right;
+        position: absolute;
+        left: 74%;
+        bottom: 0;
+        z-index: -1;
+
+        @include media(w1024) {
+            left: 86%;
+        }
+    }
+
+    &__gear {
+        position: relative;
+
+        &_medium {
+            transform: rotate(7deg);
+            position: absolute;
+            right: calc(100% - 14px);
+            top: 22%;
+
+            @include media(w1024) {
+                top: 21%;
+                right: 31vw;
+                width: 24vw;
+            }
+        }
+
+        &_big {
+            transform: rotate(7deg);
+
+            @include media(w1024) {
+                width: 32vw;
+            }
+        }
+    }
+}

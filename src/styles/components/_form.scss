@@ -1,0 +1,226 @@
+$form-input-border: #8f8f8f;
+$form-input-bg: #e1e1e1;
+
+$form-input-height: 42px;
+$form-input-padding: 25px;
+
+.form-wrap {
+    transition: 0.5s ease;;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+    z-index: 100;
+
+    &_open {
+        opacity: 1;
+        visibility: visible;
+        
+        .form-container {
+            opacity: 1;
+        }
+    }
+}
+.form-open {
+    overflow: hidden;
+
+    body {
+        overflow-y: scroll;
+    }
+}
+.form-container {
+    background-color: white;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: left;
+    opacity: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 15px 30px;
+    position: relative;
+    width: 400px;
+    z-index: 100;
+
+    &_gift {
+        width: 500px;
+
+        @include media(w768) {
+            padding: 20px 10px 30px;
+        }
+    }
+
+    @include media(w768) {
+        // margin-top: 30px;
+        padding: 15px 20px;
+        width: 300px;
+    }
+}
+
+.form {
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 24px;
+        width: 24px;
+
+        &:before,
+        &:after {
+            content: "";
+            background-color: #7f7f7e;
+            margin-left: -1px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 2px;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @media screen and (max-width:768px) {
+            //font-size: 28px;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 5px;
+
+        @include media(w768) {
+            font-size: 30px;
+        }
+    }
+
+    &__descr {
+        font-size: 15px;
+        margin-bottom: 10px;
+
+        @media screen and (max-width:768px) {
+            // font-size: 16px;
+            // margin-bottom: 30px;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 12px;
+
+        span {
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+    }
+
+    &__select {
+        background-color: transparent;
+        color: #3f3e3c;
+        font-size: 22px;
+        padding: 0 $form-input-padding;
+        height: $form-input-height;
+        width: 100%;
+    }
+
+    &__input {
+        @include placeholder {
+            color: #3f3e3c;
+        }
+        background-color: transparent;
+        color: #3f3e3c;
+        font-size: 16px;
+        padding: 0 $form-input-padding;
+        height: $form-input-height;
+        width: 100%;
+    }
+
+    &__btn {
+        margin-bottom: 14px;
+        position: relative;
+        font-size: 20px;
+        height: $form-input-height;
+        width: 100%;
+
+        &_center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &_size {
+
+            &:after {
+                transform: translateY(-50%);
+                content: "PDF, 13 Mb";
+                color: #a6a6a6;
+                font-family: "PTSans", sans-serif;
+                font-size: 18px;
+                position: absolute;
+                top: 50%;
+                left: calc(100% + 30px);
+                white-space: nowrap;
+
+                @include media(w768) {
+                    font-size: 16px;
+                    left: calc(100% + 20px);
+                }
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            font-size: 18px;
+        }
+    }
+
+    &__security-text.form__security-text {
+        display: inline;
+        font-size: 12px;
+    }
+
+    &__security-text_big.form__security-text {
+        display: inline;
+        font-size: 16px;
+    }
+
+    &__security-link {
+        color: currentColor;
+        display: inline;
+    }
+
+    &__img-gift {
+        transform: translate(55%, 20%);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__gift-btn {
+        width: 100%;
+    }
+}
